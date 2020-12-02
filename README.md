@@ -41,7 +41,7 @@ KR-Medium is trained for 2M steps with the maxlen of 128, training batch size of
 
 from transformers import AutoTokenizer, AutoModel
 
-tokenizer = AutoTokenizer.from_pretrained("snunlp/KR-Medium")
+tokenizer = AutoTokenizer.from_pretrained("snunlp/KR-Medium", do_lower_case=False)
 
 model = AutoModel.from_pretrained("snunlp/KR-Medium")
 
