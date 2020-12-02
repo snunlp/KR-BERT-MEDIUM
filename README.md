@@ -2,7 +2,7 @@
 
 A pretrained Korean-specific BERT model developed by Computational Linguistics Lab at Seoul National University.
 
-It is based on our character-level [KR-BERT](https://github.com/snunlp/KR-BERT) models which utilize WordPiece and BidirectionalWordPiece tokenizers.
+It is based on our character-level [KR-BERT](https://github.com/snunlp/KR-BERT) model which utilize WordPiece tokenizer.
 
 <br>
 
