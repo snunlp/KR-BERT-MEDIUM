@@ -48,6 +48,12 @@ model = AutoModel.from_pretrained("snunlp/KR-Medium")
 ```
 
 
+### Requirements
+
+- transformers == 4.0.0
+- tensorflow < 2.0
+
+
 ## Downstream tasks
 
 * Movie Review Classification on Naver Sentiment Movie Corpus [(NSMC)](https://github.com/e9t/nsmc)
