@@ -76,10 +76,10 @@ python3 run_classifier.py \
 TensorFlow, test set performances
 
 
-|       | multilingual BERT | KorBERT<br>character | KoBERT | KR-BERT<br>character<br>WordPiece | KR-Medium |
-|:-----:|-------------------:|----------------:|--------:|----------------------------:|-----------------------------------------:|
-| NSMC (Acc) |  86.82   | 89.81  | n/a |  89.74 | 90.29 |
-| Hate Speech (F1) | 52.03 | 54.33 | n/a | 54.53 | 57.91 |
+|       | multilingual BERT | KorBERT<br>character | KR-BERT<br>character<br>WordPiece | KR-Medium |
+|:-----:|-------------------:|----------------:|----------------------------:|-----------------------------------------:|
+| NSMC (Acc) |  86.82   | 89.81  |  89.74 | 90.29 |
+| Hate Speech (F1) | 52.03 | 54.33 | 54.53 | 57.91 |
 
 
 <br>
