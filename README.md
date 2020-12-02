@@ -25,7 +25,6 @@ This model’s vocabulary size is 20,000, whose tokens are trained based on the 
 
 KR-Medium is trained for 2M steps with the maxlen of 128, training batch size of 64, and learning rate of 1e-4, taking 22 hours to train the model using a Google Cloud TPU v3-8.
 
-<br>
 
 ### Models
 
@@ -37,8 +36,16 @@ KR-Medium is trained for 2M steps with the maxlen of 128, training batch size of
 
 * You can import it from Transformers!
 
+```sh
+# pytorch, transformers
 
-<br>
+from transformers import AutoTokenizer, AutoModel
+
+tokenizer = AutoTokenizer.from_pretrained("snunlp/KR-Medium")
+
+model = AutoModel.from_pretrained("snunlp/KR-Medium")
+
+```
 
 
 ## Downstream tasks
@@ -76,15 +83,15 @@ python3 run_classifier.py \
 TensorFlow, test set performances
 
 
-|       | multilingual BERT | KorBERT<br>character | KR-BERT<br>character<br>WordPiece | KR-Medium |
-|:-----:|-------------------:|----------------:|----------------------------:|-----------------------------------------:|
-| NSMC (Acc) |  86.82   | 89.81  |  89.74 | 90.29 |
-| Hate Speech (F1) | 52.03 | 54.33 | 54.53 | 57.91 |
+|       | multilingual BERT | KorBERT<br>character | KoBERT | KR-BERT<br>character<br>WordPiece | KR-Medium |
+|:-----:|-------------------:|----------------:|--------:|----------------------------:|-----------------------------------------:|
+| NSMC (Acc) |  86.82   | 89.81  | n/a |  89.74 | 90.29 |
+| Hate Speech (F1) | 52.03 | 54.33 | n/a | 54.53 | 57.91 |
+
+
 
 
 <br>
-
-
 
 ## Contacts
 
