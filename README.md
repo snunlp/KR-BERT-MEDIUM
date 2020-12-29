@@ -1,4 +1,4 @@
-# KR-Medium
+# KR-BERT-MEDIUM
 
 A pretrained Korean-specific BERT model developed by Computational Linguistics Lab at Seoul National University.
 
@@ -8,7 +8,7 @@ It is based on our character-level [KR-BERT](https://github.com/snunlp/KR-BERT) 
 
 ### Vocab, Parameters and Data
 
-|                |                              Mulitlingual BERT<br>(Google) |                KorBERT<br>(ETRI) |                              KoBERT<br>(SKT) |                       KR-BERT character |                   KR-Medium |
+|                |                              Mulitlingual BERT<br>(Google) |                KorBERT<br>(ETRI) |                              KoBERT<br>(SKT) |                       KR-BERT character |                   KR-BERT-MEDIUM |
 | -------------: | ---------------------------------------------: | ---------------------: | ----------------------------------: | -------------------------------------: | -------------------------------------: |
 |     vocab size |                                        119,547 |                 30,797 |                               8,002 |                                 16,424 |                                 20,000 |
 | parameter size |                                    167,356,416 |            109,973,391 |                          92,186,880 |                             99,265,066 |                             102,015,010 |
@@ -19,11 +19,11 @@ It is based on our character-level [KR-BERT](https://github.com/snunlp/KR-BERT) 
 
 The training data for this model is expanded from those of KR-BERT, texts from Korean Wikipedia, and news articles, by addition of legal texts crawled from the National Law Information Center and [Korean Comments dataset](https://www.kaggle.com/junbumlee/kcbert-pretraining-corpus-korean-news-comments). This data expansion is to collect texts from more various domains than those of KR-BERT. The total data size is about 12.37GB, consisting of 91M and 1.17B words.
 
-The user-generated comment dataset is expected to have similar stylistic properties to the task datasets of NSMC and HSD. Such text includes abbreviations, coinages, emoticons, spacing errors, and typos. Therefore, we added the dataset containing such on-line properties to our existing formal data such as news articles and Wikipedia texts to compose the training data for KR-Medium. Accordingly, KR-Medium reported better results in sentiment analysis than other models, and the performances improved with the model of the more massive, more various training data.
+The user-generated comment dataset is expected to have similar stylistic properties to the task datasets of NSMC and HSD. Such text includes abbreviations, coinages, emoticons, spacing errors, and typos. Therefore, we added the dataset containing such on-line properties to our existing formal data such as news articles and Wikipedia texts to compose the training data for KR-BERT-MEDIUM. Accordingly, KR-BERT-MEDIUM reported better results in sentiment analysis than other models, and the performances improved with the model of the more massive, more various training data.
 
 This model’s vocabulary size is 20,000, whose tokens are trained based on the expanded training data using the WordPiece tokenizer.
 
-KR-Medium is trained for 2M steps with the maxlen of 128, training batch size of 64, and learning rate of 1e-4, taking 22 hours to train the model using a Google Cloud TPU v3-8.
+KR-BERT-MEDIUM is trained for 2M steps with the maxlen of 128, training batch size of 64, and learning rate of 1e-4, taking 22 hours to train the model using a Google Cloud TPU v3-8.
 
 
 ### Models
@@ -89,7 +89,7 @@ python3 run_classifier.py \
 TensorFlow, test set performances
 
 
-|       | multilingual BERT | KorBERT<br>character | KR-BERT<br>character<br>WordPiece | KR-Medium |
+|       | multilingual BERT | KorBERT<br>character | KR-BERT<br>character<br>WordPiece | KR-BERT-MEDIUM |
 |:-----:|-------------------:|----------------:|----------------------------:|-----------------------------------------:|
 | NSMC (Acc) |  86.82   | 89.81  | 89.74 | 90.29 |
 | Hate Speech (F1) | 52.03 | 54.33 | 54.53 | 57.91 |
