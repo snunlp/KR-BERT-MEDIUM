@@ -4,6 +4,8 @@ A pretrained Korean-specific BERT model developed by Computational Linguistics L
 
 It is based on our character-level [KR-BERT](https://github.com/snunlp/KR-BERT) model which utilize WordPiece tokenizer.
 
+Here, the model name has a suffix 'MEDIUM' since its training data grew from KR-BERT's original dataset. We have another additional model, KR-BERT-EXPANDED with more extensive training data expanded from those of KR-BERT-MEDIUM, so the suffix 'MEDIUM' is used.
+
 <br>
 
 ### Vocab, Parameters and Data
